@@ -1,0 +1,29 @@
+page-signup {
+    #logo {
+        height: 30vh;
+        width: auto;
+        margin: 10vh auto 20px;
+        display: block;
+    }
+
+    .item {
+        border-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        color: white; 
+    }
+
+    .signup-button, .login-button {
+        color: brown;
+        width: 80vw;
+        margin-top: 15px;
+        margin-right: 10vw;
+    }
+    
+    .signup-button {
+        background: #fff;
+    }
+    
+    .login-button {
+        background: #FDB443;
+    }
+}

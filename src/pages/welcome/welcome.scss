@@ -1,0 +1,20 @@
+ion-content {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#logo {
+    height: 30vh;
+    width: auto;
+    margin: 10vh auto 30vh;
+    display: block;
+}
+
+p {
+    color: #572E24;
+    margin: 20px 30px;
+    font-size: 20px;
+    background: rgb(253, 200, 121)
+}

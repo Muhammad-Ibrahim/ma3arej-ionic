@@ -1,0 +1,42 @@
+<ion-content style="background:url('../assets/imgs/bckg.jpg') no-repeat center center fixed; ;background-size:cover;">
+  <img src="../assets/imgs/mlogo.png" alt="ma3arij logo" id="logo">
+  
+  <form [formGroup]="user" (ngSubmit)="welcome()">
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+        &ensp;البريد الالكتروني
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user.email" formControlName="email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-person" md="md-person"></ion-icon>
+        &ensp;اسم المستخدم
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user.name" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+        &ensp;كلمة السر
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+        &ensp;تأكيد كلمة السر
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password2" formControlName="password2"></ion-input>
+    </ion-item>
+
+    <button ion-button round block class="signup-button" type="submit" [disabled]="!user.valid">سجل الآن</button>
+  </form>
+  <button ion-button round block class="login-button" (click)="login();">لديك حساب؟</button>
+  <button ion-button round block class="signup-button" (click)="signupFacebook();">سجل باستخدام فيسبوك</button>  
+  <button ion-button round block class="signup-button" (click)="signupTwitter();">سجل باستخدام تويتر</button>  
+</ion-content>

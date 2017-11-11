@@ -1,3 +1,28 @@
-page-home {
+ion-content {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
+#logo {
+    height: 40vh;
+    width: auto;
+    margin: 10vh auto 20px;
+    display: block;
+}
+
+#signup-button, #login-button {
+  color: brown;
+  width: 80vw;
+  margin-top: 15px;
+  margin-right: calc(10vw - 24px);
+}
+
+#signup-button {
+  background: #fff;
+}
+
+#login-button {
+  background: #FDB443;
 }

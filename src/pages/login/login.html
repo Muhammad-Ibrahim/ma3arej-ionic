@@ -1,0 +1,26 @@
+<ion-content style="background:url('../assets/imgs/bckg.jpg') no-repeat center center fixed; ;background-size:cover;">
+  <img src="../assets/imgs/mlogo.png" alt="ma3arij logo" id="logo">
+  
+  <form [formGroup]="user" (ngSubmit)="welcome()">
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-person" md="md-person"></ion-icon>
+        &ensp;اسم المستخدم
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user.name" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+        &ensp;كلمة السر
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <button ion-button round block class="login-button" type="submit" [disabled]="!user.valid">تسجيل الدخول</button>
+  </form>
+  <button ion-button round block class="signup-button" (click)="signup();">ليس لديك حساب؟</button>
+  <button ion-button round block class="signup-button" (click)="loginFacebook();">سجل باستخدام فيسبوك</button>
+  <button ion-button round block class="signup-button" (click)="loginTwitter();">سجل باستخدام تويتر</button>
+</ion-content>
